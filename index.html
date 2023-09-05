@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aaaa chto proishodit</title>
+</head>
+<body >
+    <table width="100%">
+        <tr>
+            <th colspan="5">Русакова Елена Дмитриевна, P3217, вариант 2701</th>
+        </tr>
+        <tr>
+            <td>
+                <p>x= </p>
+            </td>
+            <td>
+                <select id="select_x" onchange="set_x_value()">
+                    <option value="-5" id="x-5">-5</option>
+                    <option value="-4" id="x-4">-4</option>
+                    <option value="-3" id="x-3">-3</option>
+                    <option value="-2" id="x-2">-2</option>
+                    <option value="-1" id="x-1">-1</option>
+                    <option value="0" id="x0">0</option>
+                    <option value="1" id="x1">1</option>
+                    <option value="2" id="x2">2</option>
+                    <option value="3" id="x3">3</option>
+                </select>
+            </td>
+
+            <td rowspan="3">
+                <form action="checking.php" method="GET">
+                    <button type="button" id="check" name="check_button">Проверить</button>
+                </form>
+            </td>
+            <td rowspan="3">
+                <img src="график.png">
+            </td>
+            <td rowspan="3">
+                <img src="pig.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>y= </p>
+            </td>
+            <td>
+                <input type="text" id="select_y" name="y">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>R= </p>
+            </td>
+            <td>
+                <button type="button" value="1" id="r1" name="R" onclick="set_R(id)">1</button>
+                <button type="button" value="2" id="r2" name="R" onclick="set_R(id)">2</button>
+                <button type="button" value="3" id="r3" name="R" onclick="set_R(id)">3</button>
+                <button type="button" value="4" id="r4" name="R" onclick="set_R(id)">4</button>
+                <button type="button" value="5" id="r5" name="R" onclick="set_R(id)">5</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+            <table class="result-table">
+                <caption>Прошлые попытки</caption>
+                <thead>
+                    <th>x</th>
+                    <th>y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Время обработки</th>
+                    <th>Текущее время</th>
+                </thead>
+                <tbody id="result_in_table"></tbody>
+            </table>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+</body>
+</html>
