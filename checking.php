@@ -6,6 +6,7 @@
     $flag = true;
     $result = "";
     $response = "";
+    $max = 17;
 
 
     if($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -14,8 +15,13 @@
             !preg_match('/^-?\d+(\.|,)?\d*$/', $r))
             $flag = false;
 
-
+        if ($x < -5 || $x > 3)
+            $flag = false;
         if ($y < -3 || $y > 3)
+            $flag = false;
+        if ($r < 1 || $r > 5)
+            $flag = false;
+        if (strlen($x) > $max || strlen($y) > $max || strlen($r) > $max)
             $flag = false;
 
 

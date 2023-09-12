@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>aaaa chto proishodit</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body >
     <table width="100%">
@@ -10,58 +11,92 @@
             <th colspan="5">Русакова Елена Дмитриевна, P3217, вариант 2701</th>
         </tr>
         <tr>
-            <td>
+            <!-- выбор х -->
+            <td class="param">
                 <p>x= </p>
             </td>
             <td>
-                <select id="select_x" onchange="set_x_value()">
-                    <option value="-5" id="x-5">-5</option>
-                    <option value="-4" id="x-4">-4</option>
-                    <option value="-3" id="x-3">-3</option>
-                    <option value="-2" id="x-2">-2</option>
-                    <option value="-1" id="x-1">-1</option>
-                    <option value="0" id="x0">0</option>
-                    <option value="1" id="x1">1</option>
-                    <option value="2" id="x2">2</option>
-                    <option value="3" id="x3">3</option>
-                </select>
+                <input type="checkbox" id="x-5" name="x" value="-5" />
+                <label for="x-5">-5</label>
+
+                <input type="checkbox" id="x-4" name="x" value="-4" />
+                <label for="x-4">-4</label>
+
+                <input type="checkbox" id="x-3" name="x" value="-3" />
+                <label for="x-3">-3</label>
+
+                <input type="checkbox" id="x-2" name="x" value="-2" />
+                <label for="x-2">-2</label>
+
+                <input type="checkbox" id="x-1" name="x" value="-1" />
+                <label for="x-1">-1</label>
+
+                <input type="checkbox" id="x0" name="x" value="0" />
+                <label for="x0">0</label>
+
+                <input type="checkbox" id="x1" name="x" value="1" />
+                <label for="x1">1</label>
+
+                <input type="checkbox" id="x2" name="x" value="2" />
+                <label for="x2">2</label>
+
+                <input type="checkbox" id="x3" name="x" value="3" />
+                <label for="x3">3</label>
+
             </td>
 
             <td rowspan="3">
+                <!-- кнопка для проверки данных -->
                 <form action="checking.php" method="GET">
                     <button type="button" id="check" name="check_button">Проверить</button>
                 </form>
             </td>
+
+            <!-- график -->
             <td rowspan="3">
                 <img src="график.png">
             </td>
-            <td rowspan="3">
+            <!-- просто картинка со свинкой -->
+            <!--<td rowspan="3">
                 <img src="pig.jpg">
-            </td>
+            </td> -->
         </tr>
         <tr>
-            <td>
+            <!-- выбор у -->
+            <td class="param">
                 <p>y= </p>
             </td>
             <td>
-                <input type="text" id="select_y" name="y">
+                <input type="text" id="y" name="y">
             </td>
         </tr>
         <tr>
-            <td>
+            <!-- выбор r -->
+            <td class="param">
                 <p>R= </p>
             </td>
             <td>
-                <button type="button" value="1" id="r1" name="R" onclick="set_R(id)">1</button>
-                <button type="button" value="2" id="r2" name="R" onclick="set_R(id)">2</button>
-                <button type="button" value="3" id="r3" name="R" onclick="set_R(id)">3</button>
-                <button type="button" value="4" id="r4" name="R" onclick="set_R(id)">4</button>
-                <button type="button" value="5" id="r5" name="R" onclick="set_R(id)">5</button>
+                <input type="radio" id="r1" name="R" value="1" checked />
+                <label for="r1">1</label>
+
+                <input type="radio" id="r2" name="R" value="2" />
+                <label for="r2">2</label>
+
+                <input type="radio" id="r3" name="R" value="3" />
+                <label for="r3">3</label>
+
+                <input type="radio" id="r4" name="R" value="4" />
+                <label for="r4">4</label>
+
+                <input type="radio" id="r5" name="R" value="5" />
+                <label for="r5">5</label>
+
             </td>
         </tr>
         <tr>
             <td colspan="5">
-            <table class="result-table">
+                <!-- таблица с результатами -->
+            <table  id="result_in_table">
                 <caption>Прошлые попытки</caption>
                 <thead>
                     <th>x</th>
@@ -71,13 +106,16 @@
                     <th>Время обработки</th>
                     <th>Текущее время</th>
                 </thead>
-                <tbody id="result_in_table"></tbody>
+                <tbody>
+
+                </tbody>
             </table>
             </td>
         </tr>
 
     </table>
 
+    <script type="text/javascript" src="main.js"></script>
 
 
 </body>
