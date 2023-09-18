@@ -47,7 +47,7 @@
 
             <td rowspan="3">
                 <!-- кнопка для проверки данных -->
-                <form action="checking.php" method="GET">
+                <form action="php/script.php" method="GET">
                     <button type="button" id="check" name="check_button">Проверить</button>
                 </form>
             </td>
@@ -57,9 +57,9 @@
                 <img src="график.png">
             </td>
             <!-- просто картинка со свинкой -->
-            <!--<td rowspan="3">
+            <td rowspan="3">
                 <img src="pig.jpg">
-            </td> -->
+            </td>
         </tr>
         <tr>
             <!-- выбор у -->
@@ -96,8 +96,8 @@
         <tr>
             <td colspan="5">
                 <!-- таблица с результатами -->
-            <table  id="result_in_table">
-                <caption>Прошлые попытки</caption>
+            <table  id="result_in_table" border="1" >
+               <!-- <caption>Прошлые попытки</caption> -->
                 <thead>
                     <th>x</th>
                     <th>y</th>

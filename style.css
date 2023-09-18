@@ -3,3 +3,24 @@
     height: 20%;
     font-weight: bold;
 }
+
+img[src="pig.jpg"] {
+    height: 300px;
+}
+
+table[id="result_in_table"] tr:hover {
+    color: darkblue;
+    background-color: hotpink;
+}
+
+table[id="result_in_table"] > tr{
+    text-align: center;
+}
+
+button {
+
+}
+
+/*button :hover{
+   background-color: cornflowerblue;
+}*/
