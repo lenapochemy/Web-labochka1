@@ -22,7 +22,6 @@ class Validator{
     private function checkY(){
         return is_numeric($this -> y) && ($this -> y > -3 && $this -> y < 3);
     }
-
     private function checkR(){
         return in_array($this -> r, array(1, 2, 3, 4, 5));
     }

@@ -1,26 +1,69 @@
+body {
+    background-color: #B1DDF0;
+}
+#my_name {
+    font-family: fantasy;
+    color: deeppink;
+    text-shadow: 2px 2px 2px black;
+    font-size: 3rem;
+    word-spacing: 4pt;
+    letter-spacing: 2pt;
+}
 
 .param {
-    height: 20%;
+    font-size: large;
     font-weight: bold;
 }
 
-img[src="pig.jpg"] {
-    height: 300px;
+img {
+    height: 250px;
 }
 
 table[id="result_in_table"] tr:hover {
     color: darkblue;
     background-color: hotpink;
 }
+table[id="result_in_table"] > thead {
+    font-size: large;
+}
 
-table[id="result_in_table"] > tr{
+table > caption {
+    font-size: larger;
+    font-weight: bold;
+    background-color: deeppink;
+    height: 2.5ch;
+}
+
+h1, table[id="result_in_table"] > tr{
     text-align: center;
 }
 
-button {
-
+#instruction {
+    font-size: large;
 }
 
-/*button :hover{
-   background-color: cornflowerblue;
-}*/
+table#result_in_table {
+    table-layout: fixed;
+}
+
+button:hover, button:focus{
+   background-color: lightpink;
+}
+
+button {
+    background-color: cornflowerblue;
+    font-weight: bold;
+    padding: 4px 9px 4px;
+    font-size: large;
+    /*text-align: center;
+     */
+    display: flex;
+    justify-content: center;
+}
+
+.success{
+    color: green;
+}
+.fail {
+    color: red;
+}
