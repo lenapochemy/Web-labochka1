@@ -14,14 +14,22 @@
         return;
     }
 
-    date_default_timezone_set('Europe/Moscow');
+    date_default_timezone_set($_GET["timezone"]);
 
-    $x = (float) $_GET["x"];
+    /*$x = (float) $_GET["x"];
     $y = (float) $_GET["y"];
     $r = (float) $_GET["r"];
+   */
+
+    $x = $_GET["x"];
+    $y = $_GET["y"];
+    $r = $_GET["r"];
 
     $validator = new Validator($x, $y, $r);
     if($validator -> checkCoord()) {
+        //$x = (float) $x;
+        //$y = (float) $y;
+        //$r = (float) $r;
         $inArea = Checker::inArea($x, $y, $r);
         $coordsStatus = $inArea
             ? "<span class='success'>Точка попала</span>"

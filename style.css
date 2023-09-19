@@ -42,9 +42,11 @@ h1, table[id="result_in_table"] > tr{
     font-size: large;
 }
 
-table#result_in_table {
+/*table#result_in_table {
     table-layout: fixed;
 }
+
+ */
 
 button:hover, button:focus{
    background-color: lightpink;
@@ -55,8 +57,6 @@ button {
     font-weight: bold;
     padding: 4px 9px 4px;
     font-size: large;
-    /*text-align: center;
-     */
     display: flex;
     justify-content: center;
 }

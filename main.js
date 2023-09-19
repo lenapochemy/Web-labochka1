@@ -1,22 +1,22 @@
 let x, y, r;
 
-window.onload = function (){
+window.onload = function () {
     document.getElementById("result_in_table").innerHTML = localStorage.getItem("session");
-}
 
-document.getElementById("check").onclick = function (){
-    //console.log(x, y, r);
-    if(valid_x() && valid_y() && valid_r()) {
-        const coords = "x=" + encodeURIComponent(x) + "&y=" + encodeURIComponent(y) + "&r=" + encodeURIComponent(r) +
-            "timezone=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        fetch("php/script.php?" + coords, {
-            method: "GET",
-            headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" }
-        }).then(resp => resp.text()).then(function (serverAnswer){
-            localStorage.setItem("session", serverAnswer);
-            document.getElementById("result_in_table").innerHTML = serverAnswer;
-        }).catch(err => alert(err.status + " " + err));
+    document.getElementById("check").onclick = function () {
+        //console.log(x, y, r);
+        if (valid_x() && valid_y() && valid_r()) {
+            const coords = "x=" + encodeURIComponent(x) + "&y=" + encodeURIComponent(y) + "&r=" + encodeURIComponent(r) +
+                "&timezone=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone);
+            fetch("php/script.php?" + coords, {
+                method: "GET",
+                headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}
+            }).then(resp => resp.text()).then(function (serverAnswer) {
+                localStorage.setItem("session", serverAnswer);
+                document.getElementById("result_in_table").innerHTML = serverAnswer;
+            }).catch(err => alert(err.status + " " + err));
 
+        }
     }
 }
 
