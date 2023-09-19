@@ -94,14 +94,18 @@
         </tr>
         <tr>
             <td colspan="3">
-                <!-- кнопка для проверки данных -->
-                <form action="php/script.php" method="GET">
+                <!-- кнопка для проверки данных
+                <form action="php/script.php" method="GET"> -->
+                <form>
                     <button type="button" id="check" name="check_button">Проверить</button>
                 </form>
             </td>
         </tr>
         <tr>
             <td colspan="5" id="result_in_table" >
+                <h4>
+                    <span class="outputStub notification">Нет результатов</span>
+                </h4>
                 <!-- таблица с результатами
             <table  border="1" >
                 <caption>Прошлые попытки</caption>
@@ -124,7 +128,6 @@
     </table>
 
     <script type="text/javascript" src="main.js"></script>
-
 
 </body>
 </html>
