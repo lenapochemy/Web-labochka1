@@ -27,9 +27,7 @@
 
     $validator = new Validator($x, $y, $r);
     if($validator -> checkCoord()) {
-        //$x = (float) $x;
-        //$y = (float) $y;
-        //$r = (float) $r;
+
         $inArea = Checker::inArea($x, $y, $r);
         $coordsStatus = $inArea
             ? "<span class='success'>Точка попала</span>"
@@ -72,6 +70,6 @@
         }
         echo "</table>";
     } else {
-        http_response_code(422);
+        http_response_code(400);
         return;
     }
